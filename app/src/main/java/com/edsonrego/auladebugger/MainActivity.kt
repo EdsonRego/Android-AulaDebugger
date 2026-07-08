@@ -19,21 +19,26 @@ class MainActivity : AppCompatActivity() {
 
         var listaUsuarios = listOf("Ana", "Bia", "Gui", "Rebeca")
 
-        exibirListaItens(listaUsuarios)
+        exibirListaUsuario(listaUsuarios)
     }
 
-    private fun exibirListaItens(listaUsuarios: List<String>) {
+    private fun exibirListaUsuario(listaUsuarios: List<String>) {
 
         var exibirPrimeiroUsuario = true
-        var contatorItens = 0
+        var contadorItens = 0
 
         for (usuario in listaUsuarios) {
             if(exibirPrimeiroUsuario){
-                println("O primeiro item é $usuario")")
+                println("O primeiro usuario")
                 exibirPrimeiroUsuario = false
             }
-            println(usuario)
-            contatorItens++
+            exibirItem("O item usuario")
+            contadorItens++
         }
+    }
+
+    private fun exibirItem(usuario: String) {
+        println(usuario)
+        println("-----")
     }
 }
